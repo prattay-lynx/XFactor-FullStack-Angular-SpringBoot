@@ -13,7 +13,7 @@ Library Management Application
 
 ## How to start the application
 ```
-$ git clone https://github.com/crkarthik11/openlibrary.git
+$ git clone https://github.com/prattay-lynx/XFactor-FullStack-Angular-SpringBoot.git
 $ cd openlibrary
 $ cd backend
 $ gradlew bootrun
