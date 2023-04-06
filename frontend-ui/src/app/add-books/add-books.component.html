@@ -1,0 +1,80 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card mt-5 border p-3 rounded-5">
+                <div class="card-header">
+                    <h1 class="text-center">Enter Book Details</h1>
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="booksForm" (ngSubmit)="saveBook()">
+                        <div class="form-group">
+                            <label for="Id">Book Name</label>
+                            <input type="text" class="form-control" formControlName="title" placeholder="Enter the name">
+                        </div>
+                        <div class="form-text-danger" *ngIf="BookName.errors?.['required']">
+                           <p>* This is a mandatory field!!</p>
+                        </div>
+                        <div class="form-group">
+                            <label>Author</label>
+                            <input type="text" class="form-control" formControlName="author"
+                                placeholder="Enter author">
+                        </div>
+                        <div class="form-group">
+                            <label>ISBN</label>
+                            <input type="number" class="form-control" formControlName="isbn"
+                                placeholder="Enter the ISBN">
+                        </div>
+                        <div class="form-group">
+                            <label>Copies</label>
+                            <input type="number" class="form-control" formControlName="copies"
+                                placeholder="Enter the no. of copies" 
+                                title="Copies must be atleast 1">
+                        </div>
+                        <div class="form-group">
+                            <label>Publication Date</label>
+                            <input type="date" class="form-control" formControlName="publicationDate"
+                                placeholder="Enter the publication date">
+                        </div>
+                        <div class="form-group">
+                            <label>Publisher</label>
+                            <input type="text" class="form-control" formControlName="publisher"
+                                placeholder="Enter the publisher">
+                        </div>
+                        <div class="form-group">
+                            <label>Category</label>
+                            <input type="text" class="form-control" formControlName="category"
+                                placeholder="Enter the category">
+                        </div>
+                        <div class="form-group">
+                            <label>Genre</label>
+                            <input type="text" class="form-control" formControlName="genre"
+                                placeholder="Enter the genre">
+                        </div>
+                        <div class="form-group">
+                            <label>SubGenre</label>
+                            <input type="text" class="form-control" formControlName="subgenre"
+                                placeholder="Enter the subgenre">
+                        </div>
+                        <div class="text-center" *ngIf="booksForm.valid">
+                            <button type="submit" class="btn btn-primary">Save
+                                Books</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <div class="card text-center mx-auto">
+            <div class="card-body">
+                <h3 class="card-title mt-6">Form status: {{booksForm.valid}}</h3>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>

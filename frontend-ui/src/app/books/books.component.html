@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+<h1 class="fade-in" >{{title}}</h1>
+<h2 class="fade-in" *ngIf="books.length<1">No Data Available!!</h2>
+<div style="display: flex; justify-content: space-between; margin-left : 100px; margin-right : 100px;">
+    <button class="button" (click)="addBooks()">Add Books</button>
+    <button class="button" (click)="findBook()">Find Books</button>
+<div style="margin-right:100px" class="count-container">Count: {{totalBooks}}</div>
+
+</div>
+<div class="prattay">
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>ISBN</th>
+            <th>Publ. Date</th>
+            <th>Publisher</th>
+            <th>Copies</th>
+            <th>Category</th>
+            <th>Genre</th>
+            <th>Subgenre</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody *ngIf="books.length > 0">
+        <tr *ngFor="let book of books">
+            <td>{{book.id}}</td>
+            <td>{{book.title}}</td>
+            <td>{{book.author}}</td>
+            <td>{{book.isbn}}</td>
+            <td>{{book.publicationDate }}</td>
+            <td>{{book.publisher}}</td>
+            <td>{{book.copies}}</td>
+            <td>{{book.category}}</td>
+            <td>{{book.genre}}</td>
+            <td>{{book.subgenre}}</td>
+            <td><button (click)="deleteBook(book.id)">Delete</button></td>
+        </tr>
+    </tbody>
+</table></div>

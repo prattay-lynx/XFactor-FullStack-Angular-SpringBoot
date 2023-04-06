@@ -1,0 +1,72 @@
+@font-face {
+    font-family: Google sans;
+    src: url(/src/assets/GoogleSans-Regular_0.ttf);
+}
+
+
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-image: url('https://res.cloudinary.com/practicaldev/image/fetch/s--CJSgAPoK--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/7f2fnmn2iryxjv1pkfyr.png');
+    /* https: //res.cloudinary.com/practicaldev/image/fetch/s--CJSgAPoK--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/7f2fnmn2iryxjv1pkfyr.png */
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+
+.sidenav a {
+    padding: 14px 14px 14px 30px;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: Google Sans;
+    color: #fff4f4;
+    display: flex;
+}
+
+.sidenav a:hover {
+    color: #b91515;
+}
+
+.sidenav a i {
+    margin-right: 20px;
+}
+
+.sidenav {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+  .sidenav {
+      display: block;
+  } 
+
+  @media (max-width: 768px) {
+      .sidenav {
+          display: none;
+      }
+    } 
+.sidenav img {
+    display: block;
+    margin: auto;
+    width: 80%;
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+      

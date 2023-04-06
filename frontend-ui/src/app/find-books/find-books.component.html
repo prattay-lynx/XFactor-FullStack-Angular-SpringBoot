@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<div class="container">
+    <div class="form-group">
+        <h1 class="fade-in" >Enter Book ID:</h1>
+        <input type="text" id="bookId" [(ngModel)]="bookId" class="form-control" placeholder="Book ID">
+    </div>
+
+    <button class="btn btn-primary" (click)="findBookByID()">Find Book</button>
+
+    <div class="card mt-3" *ngIf="book">
+        <div class="card-body">
+            <h5 class="card-title">{{book.title}}</h5>
+            <p class="card-text">
+                <strong>Author:</strong> {{book.author}}<br>
+                <strong>ISBN:</strong> {{book.isbn}}<br>
+                <strong>Copies:</strong> {{book.copies}}<br>
+                <strong>Publication Date:</strong> {{book.publicationDate}}<br>
+                <strong>Publisher:</strong> {{book.publisher}}<br>
+                <strong>Category:</strong> {{book.category}}<br>
+                <strong>Genre:</strong> {{book.genre}}<br>
+                <strong>Sub-Genre:</strong> {{book.subgenre}}
+            </p>
+        </div>
+    </div>
+
+    <div class="alert alert-danger mt-3" *ngIf="errorMessage">
+        "error!!"
+    </div>
+</div>

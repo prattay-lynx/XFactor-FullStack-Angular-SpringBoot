@@ -1,0 +1,59 @@
+@font-face {
+    font-family: HarmonyOs Sans, sans-serif;
+    src: url(/src/assets/harmonyOS.ttf);
+}
+
+.card {
+    border-radius: 20px;
+    box-shadow: 0 0 60px rgba(8, 8, 10, 0.1);
+    overscroll-behavior-x: smooth;
+    background-color: aliceblue;
+}
+
+
+.card-header {
+    transition: all 0.3s ease-in-out;
+    font-family: HarmonyOS Sans, sans-serif;
+    /* color: #adb7c2; */
+    font-variant: calc();
+    background-color: rgb(166, 199, 171);
+}
+
+.card:hover .card-header {
+    transform: translateY(-5px);
+}
+
+
+.form-control {
+    transition: all 0.3s ease-in-out;
+}
+
+
+.form-control:focus {
+    border-color: #0b0c0e;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    transform: scale(1.02);
+    font-family: HarmonyOS Sans, sans-serif;
+}
+
+.btn-primary {
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+.mt-6 {
+    text-align: center;
+    padding-top: 10px;
+}

@@ -1,0 +1,35 @@
+<html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<h1 class="fade-in">{{title}}</h1>
+<h2 class="fade-in" *ngIf="students.length < 1">No Data Available!!</h2>
+<div style="margin: 20px; float:right">
+    <button class="button" (click)="addStudents()">Add Student</button>
+</div>
+<div class ="table-design">
+        <table>
+                <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>NAME</th>
+                            <th>DEPARTMENT</th>
+                            <th>ROLL NO.</th>
+                            <th>BIRTH DATE</th>
+                            <th>PHONE NO.</th>
+                            <th>DELETE</th>
+                        </tr>
+                    </thead>
+                    <tbody *ngIf="students.length > 0">
+                        <tr *ngFor="let s of students">
+                            <td>{{s.id}}</td>
+                            <td>{{s.name}}</td>
+                            <td>{{s.department}}</td>
+                            <td>{{s.rollNumber}}</td>
+                            <td>{{s.birthDate}}</td>
+                            <td>{{s.mobileNumber}}</td>
+                            <td><button (click)="deleteStudent(s.id)">Delete</button></td>
+                        </tr>
+                    </tbody>
+            </table>
+    </div>
+</html>
+

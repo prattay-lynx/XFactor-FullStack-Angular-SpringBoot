@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<h1 class="fade-in">{{title}}</h1>
+<h2 class="fade-in" *ngIf="loans.length < 1">No Data</h2>
+<div style="margin: 20px; float:right">
+    <button class="button" (click)="addLoans()">Add Loans</button>
+</div>
+            <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>BOOK ID</th>
+                            <th>CHECKOUT DATE</th>
+                            <th>DUE DATE</th>
+                            <th>RETURN DATE</th>
+                            <th>STUDENT ID</th>
+                            <th>DELETE</th>
+                        </tr>
+                    </thead>
+                    <tbody *ngIf="loans.length > 0">
+                        <tr *ngFor="let l of loans">
+                            <td>{{l.id}}</td>
+                            <td>{{l.bookId}}</td>
+                            <td>{{l.checkoutDate}}</td>
+                            <td>{{l.dueDate}}</td>
+                            <td>{{l.returnDate}}</td>
+                            <td>{{l.studentId}}</td>
+                            <td><button (click)="deleteLoan(l.id)">Delete</button></td>
+                        </tr>
+                </tbody>
+            </table>

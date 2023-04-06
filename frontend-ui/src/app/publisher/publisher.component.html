@@ -1,0 +1,32 @@
+<h1 class = "fade-in" [ngClass]="isBlue? 'title-grey':'title-red'">{{title}}</h1>
+
+<!-- <h1 >{{title}}</h1> -->
+<h2 class ="fade-in" *ngIf="publ.length < 1">No Data Available!!</h2>
+<div style="margin: 20px; float:right">
+    <button class="button" (click)="addPub()">Add Publisher</button>
+</div>
+<div class="pub-table">
+        <table>
+                <thead>
+                        <tr>
+                            <th><b>ID</b></th>
+                            <th><b>ADDRESS</b></th>
+                            <th><b>EMAIL</b></th>
+                            <th><b>NAME</b></th>
+                            <th><b>PHONE</b></th>
+                            <th><b>DELETE</b></th>
+                        </tr>
+                    </thead>
+                    <tbody *ngIf="publ.length > 0">
+                        <tr *ngFor="let p of publ">
+                            <td>{{p.id}}</td>
+                            <td>{{p.address}}</td>
+                            <td>{{p.email}}</td>
+                            <td>{{p.name}}</td>
+                            <td>{{p.phone}}</td>
+                            <td><button (click)="deletePub(p.id)">Delete</button></td>
+                        </tr>
+                    </tbody>
+        </table>
+    </div>
+

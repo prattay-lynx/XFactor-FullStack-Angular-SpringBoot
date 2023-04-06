@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<div class="container">
+    <div class="form-group">
+        <h2 class="fade-in">Enter Admin ID:</h2>
+        <input type="text" id="adminId" [(ngModel)]="adminId" class="form-control" placeholder="Enter Admin ID">
+    </div>
+
+    <button class="btn btn-primary" (click)="findAdminByID()">Search Admin</button>
+
+    <div class="card mt-3" *ngIf="admin">
+        <div class="card-body">
+            <h5 class="card-title">Admin ID: {{admin.id}}</h5>
+            <p class="card-text">
+                <strong>Name of the Admin :</strong> {{admin.name}}<br>
+                <strong>Password :</strong> {{admin.password}}<br>
+                <strong>Username :</strong> {{admin.username}}<br>
+            </p>
+        </div>
+    </div>
+
+    <div class="alert alert-danger mt-3" *ngIf="errorMessage">
+        "error!!"
+    </div>
+</div>
+
+<div class="container">
+    <div class="form-group">
+        <h2 class="fade-in">Enter Admin Name:</h2>
+        <input type="text" id="adminName" [(ngModel)]="adminName" class="form-control" placeholder="Enter Admin Name">
+    </div>
+
+    <button class="btn btn-primary" (click)="findAdminByName()">Search Admin</button>
+
+    <div class="card mt-3" *ngIf="admin1">
+        <div class="card-body">
+            <h5 class="card-title">Admin Name: {{admin1.name}}</h5>
+            <p class="card-text">
+                <strong>ID of the Admin :</strong> {{admin1.id}}<br>
+                <strong>Password :</strong> {{admin1.password}}<br>
+                <strong>Username :</strong> {{admin1.username}}<br>
+            </p>
+        </div>
+    </div>
+
+    <div class="alert alert-danger mt-3" *ngIf="errorMessage1">
+        "error!!"
+    </div>
+</div>

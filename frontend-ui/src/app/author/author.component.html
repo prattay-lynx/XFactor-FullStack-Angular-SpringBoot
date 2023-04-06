@@ -1,0 +1,29 @@
+<h1 class="fade-in">{{title}}</h1>
+<h2 class="fade-in" *ngIf="authors.length < 1">No Data Available!!</h2>
+<div style="margin: 20px; float:right">
+    <button class="button" (click)="addAuthors()">Add Authors</button>
+</div>
+<div class="author-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Birth Date</th>
+                    <th>Name</th>
+                    <th>Nationality</th>
+                    <th>Delete Author</th>
+                </tr>
+            </thead>
+            <tbody *ngIf="authors.length > 0">
+                <tr *ngFor="let author of authors">
+                    <td>{{author.id}}</td>
+                    <td>{{author.birthDate}}</td>
+                    <td>{{author.name}}</td>
+                    <td>{{author.nationality}}</td>
+                    <td><button (click)="deleteAuthor(author.id)">Delete</button></td>
+                </tr>
+            </tbody>
+    </table>
+</div>
+
+

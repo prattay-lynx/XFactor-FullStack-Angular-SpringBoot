@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="card mt-5 border p-3 rounded-5">
+                    <div class="card-header">
+                        <h1 class="text-center">Enter Student Details</h1>
+                    </div>
+                    <div class="card-body">
+                        <form [formGroup]="studentsForm" (ngSubmit)="saveStudent()">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" class="form-control" formControlName="name" 
+                                    placeholder="Enter the Name">
+                            </div>
+                            <div class="form-group">
+                                <label>Stream</label>
+                                <input type="text" class="form-control" formControlName="department" 
+                                    placeholder="Enter the Stream">
+                            </div>
+                            <div class="form-group">
+                                <label>Roll No</label>
+                                <input type="text" class="form-control" formControlName="rollNumber" 
+                                    placeholder="Enter the Roll-No">
+                            </div>
+                            <div class="form-group">
+                                <label>Birth Date</label>
+                                <input type="date" class="form-control" formControlName="birthDate"
+                                    placeholder="Enter Birth Date">
+                            </div>
+                            <div class="form-group">
+                                <label>Phone</label>
+                                <input type="number" class="form-control" formControlName="mobileNumber"
+                                    placeholder="Enter the Phone">
+                            </div>
+                            <div class="text-center" *ngIf="studentsForm.valid">
+                                <button type="submit" class="btn btn-primary">Save
+                                    Student</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card text-center mx-auto">
+                <div class="card-body">
+                    <h3 class="card-title mt-6">Form status: {{studentsForm.valid}}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
