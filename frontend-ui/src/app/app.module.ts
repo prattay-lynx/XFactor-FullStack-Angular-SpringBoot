@@ -26,6 +26,7 @@ import { AddAuthorsComponent } from './add-authors/add-authors.component';
 import { AddStudentsComponent } from './add-students/add-students.component';
 import { FindBooksComponent } from './find-books/find-books.component';
 import { FindAdminsComponent } from './find-admins/find-admins.component';
+import { FindAuthorsComponent } from './find-authors/find-authors.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,6 +46,7 @@ import { FindAdminsComponent } from './find-admins/find-admins.component';
     AddStudentsComponent,
     FindBooksComponent,
     FindAdminsComponent,
+    FindAuthorsComponent,
   ],
   imports: [
     BrowserModule,

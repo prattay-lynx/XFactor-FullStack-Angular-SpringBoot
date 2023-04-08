@@ -18,16 +18,35 @@ export class AuthorComponent implements OnInit {
   // ]
   constructor(private router:Router,private http:HttpClient) { }
 
-    addAuthors() {
-    console.log("addAuthors button clicked!!")
-    // Take user to /add-authors url
-    this.router.navigateByUrl('/add-authors')
-    }
+  totalAuthors: number = 0;
+
+  addAuthors() {
+  console.log("addAuthors button clicked!!")
+  // Take user to /add-authors url
+  this.router.navigateByUrl('/add-authors')
+  }
   
   ngOnInit(): void {
     this.fetchAllAuthors();
+    this.findTotalCount();
   }
 
+  findAuthors() {
+    console.log("findAuthors button clicked!!")
+    this.router.navigateByUrl('/find-authors')
+  }
+
+   findTotalCount() {
+    this.http.get<number>("http://localhost:8080/Authors/findTotalAuthors").subscribe(
+      (response) => {
+        this.totalAuthors = response;
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+   }
+  
   fetchAllAuthors() {
     this.http.get("http://localhost:8080/Authors/getAllAuthors")
     .subscribe(resp =>{

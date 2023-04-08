@@ -1,7 +1,9 @@
 <h1 class="fade-in">{{title}}</h1>
 <h2 class="fade-in" *ngIf="authors.length < 1">No Data Available!!</h2>
-<div style="margin: 20px; float:right">
+<div style="display: flex; justify-content: space-between; margin-left : 100px; margin-right : 100px;">
     <button class="button" (click)="addAuthors()">Add Authors</button>
+    <button class="button" (click)="findAuthors()">Find Authors</button>
+    <div style="margin-right:100px" class="count-container">Count: {{totalAuthors}}</div>
 </div>
 <div class="author-table">
         <table>

@@ -9,37 +9,7 @@ import { Router } from '@angular/router';
 export class AdminComponent implements OnInit {
 
   title = 'Admin Management Table'
-  admins: any=[]
-  //   admins = [{
-  //     "id": 1,
-  //     "name": "Prattay",
-  //     "password": "123456",
-  //     "username": "prattay@co.in"
-  //   }
-  //   ,
-  //     {
-  //       "id": 2,
-  //       "name": "Arinjay",
-  //       "password": "pass",
-  //       "username": "arinjay@co.in"
-  //     }
-  //   ,
-    
-  //     {
-  //       "id": 3,
-  //       "name": "Soham",
-  //       "password": "barca",
-  //       "username": "soham@co.in"
-  //     }
-  //   ,
-
-  //     {"id": 4,
-  //     "name": "Arpan",
-  //     "password": "909867",
-  //     "username": "arpan@co.in"
-  //     }
-  // ]
-
+  admins: any = [];
   constructor(private router: Router,private http:HttpClient) { }
 
     totalAdmins: number = 0;
