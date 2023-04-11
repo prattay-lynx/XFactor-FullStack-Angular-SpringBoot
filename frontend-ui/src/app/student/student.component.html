@@ -2,8 +2,9 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <h1 class="fade-in">{{title}}</h1>
 <h2 class="fade-in" *ngIf="students.length < 1">No Data Available!!</h2>
-<div style="margin: 20px; float:right">
-    <button class="button" (click)="addStudents()">Add Student</button>
+<div style="display: flex; justify-content: space-between; margin-left : 100px; margin-right : 100px;">
+    <button class="button" (click)="addStudents()">Add Students</button>
+    <div style="margin-right:80px" class="count-container">Count: {{totalStuds}}</div>
 </div>
 <div class ="table-design">
         <table>

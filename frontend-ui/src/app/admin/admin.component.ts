@@ -58,6 +58,7 @@ export class AdminComponent implements OnInit {
     .subscribe(resp => {
       console.log('Admin deleted successfully');
       this.fetchAllAdmins()
+      this.findTotalCount()
     }, error => {
       console.error('Error deleting admin:', error);
     });

@@ -116,7 +116,7 @@ td button:hover {
     font-size: 16px;
     border-radius: 3px;
     font-family: Google Sans;
-    margin-right: 105px;
+    margin-left: 26px;
 }
 
 .fade-in {
@@ -156,3 +156,19 @@ td button:hover {
     transform: translateY(5px);
 }
 
+.count-container {
+    background-color: gray;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    font-family: HarmonyOS Sans;
+}
+
+.prattay {
+    margin-left: -40px;
+    margin-top: -30px;
+}

@@ -9,51 +9,34 @@ import { Router } from '@angular/router';
 })
 export class PublisherComponent implements OnInit {
 
-
+  totalPubs: number = 0;
   title = 'Publisher Management Table'
   publ: any = [];
-//   publisher=[
-//   {
-//     "id": 3,
-//     "address": "ABC Street, Bengaluru",
-//     "email": "with@co.in",
-//     "name": "TogetherWith",
-//     "phone": 9182407860
-//   },
-//   {
-//     "id": 4,
-//     "address": "Elan Street, Pune",
-//     "email": "graw@co.in",
-//     "name": "McGraw",
-//     "phone": 8240964537
-//   },
-//   {
-//     "id": 5,
-//     "address": "XYZ Road, Mumbai",
-//     "email": "jane@doe.com",
-//     "name": "Jane Doe",
-//     "phone": 7890123456
-//   },
-//   {
-//     "id": 6,
-//     "address": "MNO Avenue, Chennai",
-//     "email": "john@smith.com",
-//     "name": "John Smith",
-//     "phone": 9876543210
-//   }
-// ]
-isBlue = true
+
+  isBlue = true
   constructor(private router:Router,private http:HttpClient) { }
 
   ngOnInit(): void {
     this.fetchAllPublisher();
+    this.findTotalCount();
   }
 
-    addPub() {
-    console.log("addPublisher button clicked!!")
-    // Take user to /add-publisher url
-    this.router.navigateByUrl('/add-pub')
-    }
+  addPub() {
+  console.log("addPublisher button clicked!!")
+  // Take user to /add-publisher url
+  this.router.navigateByUrl('/add-pub')
+  }
+
+  findTotalCount() {
+    this.http.get<number>("http://localhost:8080/pubs/findTotalPublishers").subscribe(
+      (response) => {
+        this.totalPubs = response;
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
+  }
   
   fetchAllPublisher() {
       this.http.get("http://localhost:8080/pubs/getAllPublishers")

@@ -3,8 +3,8 @@
     max-width: 1000px;
     margin: auto;
     padding: 20px;
-    margin-top: 0px;
-    background-color: #c7a5a5;
+    margin-top: 10px;
+    background-color: #eb7f7f;
 }
 
 .hero-section {
@@ -30,7 +30,7 @@
     height: 1px;
     display: inline-block;
     margin: 10px;
-    background-color: #ffffff;
+    background-color: #cf4bb3;
 }
 
 .heading span:hover {
@@ -123,4 +123,18 @@ img {
     width: 30px;
     height: 30px;
     margin: 0 5px;
+}
+
+.text-blur-out {
+    -webkit-animation: text-blur-out 1.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: text-blur-out 1.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+::selection{
+    color:red;
+    background-color: Yellow;
+}
+
+.hero-section{
+    background-image: url('https://res.cloudinary.com/practicaldev/image/fetch/s--CJSgAPoK--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/7f2fnmn2iryxjv1pkfyr.png');
+    background-size: cover;
 }

@@ -64,6 +64,7 @@ export class AuthorComponent implements OnInit {
     .subscribe(resp => {
       console.log('Author deleted successfully');
       this.fetchAllAuthors()
+      this.findTotalCount()
     }, error => {
       console.error('Error deleting author:', error);
     });

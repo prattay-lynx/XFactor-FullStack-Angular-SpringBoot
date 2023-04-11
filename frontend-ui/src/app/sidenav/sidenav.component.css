@@ -1,12 +1,12 @@
 @font-face {
     font-family: Google sans;
-    src: url(/src/assets/GoogleSans-Regular_0.ttf);
+    src: url(/assets/Fonts/harmonyOS.ttf);
 }
 
 
 .sidenav {
     height: 100%;
-    width: 200px;
+    width: 210px;
     position: fixed;
     z-index: 1;
     top: 0;

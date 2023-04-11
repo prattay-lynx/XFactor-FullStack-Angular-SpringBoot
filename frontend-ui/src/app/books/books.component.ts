@@ -60,6 +60,7 @@ export class BooksComponent implements OnInit {
     .subscribe(resp => {
       console.log('Book deleted successfully');
       this.fetchAllBooks()
+      this.findTotalCount()
     }, error => {
       console.error('Error deleting book:', error);
     });

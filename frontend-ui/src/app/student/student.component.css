@@ -153,6 +153,18 @@ td button:hover {
 }
 
 .table-design{
-    margin-left: -13px;
-    padding-left: 10px;
+    margin-left: -92px;
+    margin-top: -66px;
+}
+
+.count-container {
+    background-color: gray;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    font-family: HarmonyOS Sans;
 }

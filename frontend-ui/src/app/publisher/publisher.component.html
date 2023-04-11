@@ -1,9 +1,9 @@
 <h1 class = "fade-in" [ngClass]="isBlue? 'title-grey':'title-red'">{{title}}</h1>
 
-<!-- <h1 >{{title}}</h1> -->
 <h2 class ="fade-in" *ngIf="publ.length < 1">No Data Available!!</h2>
-<div style="margin: 20px; float:right">
-    <button class="button" (click)="addPub()">Add Publisher</button>
+<div style="display: flex; justify-content: space-between; margin-left : 100px; margin-right : 100px;">
+    <button class="button" (click)="addPub()">Add Pubs</button>
+    <div style="margin-right:90px" class="count-container">Count: {{totalPubs}}</div>
 </div>
 <div class="pub-table">
         <table>
